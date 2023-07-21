@@ -17,8 +17,7 @@ import java.math.BigDecimal;
 @Setter
 public class ClientOrderDomain {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long clientId;
+    private String clientDomainId;
     private String nickName;
     private BigDecimal money;
 
