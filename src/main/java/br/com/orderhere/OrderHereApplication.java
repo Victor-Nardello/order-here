@@ -2,9 +2,10 @@ package br.com.orderhere;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+@SpringBootApplication(scanBasePackages = "br.com.orderhere")
+@EntityScan(basePackages = "br.com.orderhere.domain")
 public class OrderHereApplication {
 
 	public static void main(String[] args) {
